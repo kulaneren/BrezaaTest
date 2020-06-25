@@ -46,4 +46,58 @@ class APIClient {
         dataTask?.resume()
     }
 
+
+
+    func getPosts(withUserId userId: Int, withCompletion completion: @escaping ([Post]?, Error?) -> Void) {
+        let url = URL(string: "\(API.BaseURL)user/\(userId)/posts")!
+        dataTask?.cancel()
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+            } else if let data = data,
+                let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                do {
+                    let posts = try self.jsonDecoder.decode([Post].self, from: data)
+                    DispatchQueue.main.async {
+                        completion(posts, nil)
+                    }
+                } catch {
+                    print("Error on decoding messages : ", error)
+                    DispatchQueue.main.async {
+                        completion(nil, error)
+                    }
+                }
+            }
+        }
+        dataTask?.resume()
+    }
+
+
+    func getCommentCount(withPostId postId: Int, withCompletion completion: @escaping (Int?, Error?) -> Void) {
+        let url = URL(string: "\(API.BaseURL)posts/\(postId)/comments")!
+        dataTask?.cancel()
+        dataTask = defaultSession.dataTask(with: url) { data, response, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
+            } else if let data = data,
+                let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                do {
+                    let comments = try self.jsonDecoder.decode([Comment].self, from: data)
+                    DispatchQueue.main.async {
+                        completion(comments.count, nil)
+                    }
+                } catch {
+                    print("Error on decoding messages : ", error)
+                    DispatchQueue.main.async {
+                        completion(nil, error)
+                    }
+                }
+            }
+        }
+        dataTask?.resume()
+    }
 }

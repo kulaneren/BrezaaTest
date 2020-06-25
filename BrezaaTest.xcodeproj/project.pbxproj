@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		B05A01FC24A4F22600D03E9E /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A01FA24A4F22600D03E9E /* UserTableViewCell.swift */; };
 		B05A01FD24A4F22600D03E9E /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05A01FB24A4F22600D03E9E /* UserTableViewCell.xib */; };
+		B05A020124A50CDA00D03E9E /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A020024A50CDA00D03E9E /* UserDetailViewController.swift */; };
+		B05A020324A51D6D00D03E9E /* UIImageView+KingFisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A020224A51D6D00D03E9E /* UIImageView+KingFisher.swift */; };
+		B05A020524A52E9A00D03E9E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A020424A52E9A00D03E9E /* Post.swift */; };
+		B05A020724A52ED700D03E9E /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A020624A52ED700D03E9E /* Comment.swift */; };
+		B05A020A24A534D300D03E9E /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05A020824A534D300D03E9E /* PostsTableViewCell.swift */; };
+		B05A020B24A534D300D03E9E /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05A020924A534D300D03E9E /* PostsTableViewCell.xib */; };
 		B0AAC90624A4C16D008AEFCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC90524A4C16D008AEFCA /* AppDelegate.swift */; };
 		B0AAC90824A4C16D008AEFCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC90724A4C16D008AEFCA /* SceneDelegate.swift */; };
 		B0AAC90A24A4C16D008AEFCA /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC90924A4C16D008AEFCA /* UsersTableViewController.swift */; };
@@ -26,6 +32,12 @@
 		7CDA17F181ADCCF1F602A269 /* Pods_BrezaaTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrezaaTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05A01FA24A4F22600D03E9E /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		B05A01FB24A4F22600D03E9E /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
+		B05A020024A50CDA00D03E9E /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		B05A020224A51D6D00D03E9E /* UIImageView+KingFisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+KingFisher.swift"; sourceTree = "<group>"; };
+		B05A020424A52E9A00D03E9E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B05A020624A52ED700D03E9E /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		B05A020824A534D300D03E9E /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		B05A020924A534D300D03E9E /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 		B0AAC90224A4C16D008AEFCA /* BrezaaTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrezaaTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0AAC90524A4C16D008AEFCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0AAC90724A4C16D008AEFCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +80,7 @@
 			children = (
 				B05A01F524A4F05E00D03E9E /* Cells */,
 				B0AAC90924A4C16D008AEFCA /* UsersTableViewController.swift */,
+				B05A020024A50CDA00D03E9E /* UserDetailViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -77,6 +90,8 @@
 			children = (
 				B05A01FA24A4F22600D03E9E /* UserTableViewCell.swift */,
 				B05A01FB24A4F22600D03E9E /* UserTableViewCell.xib */,
+				B05A020824A534D300D03E9E /* PostsTableViewCell.swift */,
+				B05A020924A534D300D03E9E /* PostsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -119,6 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				B0AAC91B24A4C2BA008AEFCA /* User.swift */,
+				B05A020424A52E9A00D03E9E /* Post.swift */,
+				B05A020624A52ED700D03E9E /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				B0AAC92224A4DF02008AEFCA /* UIViewController+Alert.swift */,
+				B05A020224A51D6D00D03E9E /* UIImageView+KingFisher.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -210,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05A01FD24A4F22600D03E9E /* UserTableViewCell.xib in Resources */,
+				B05A020B24A534D300D03E9E /* PostsTableViewCell.xib in Resources */,
 				B0AAC91224A4C16F008AEFCA /* LaunchScreen.storyboard in Resources */,
 				B0AAC90F24A4C16F008AEFCA /* Assets.xcassets in Resources */,
 				B0AAC90D24A4C16D008AEFCA /* Main.storyboard in Resources */,
@@ -266,10 +285,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0AAC91E24A4DC70008AEFCA /* Constants.swift in Sources */,
+				B05A020524A52E9A00D03E9E /* Post.swift in Sources */,
 				B0AAC91C24A4C2BA008AEFCA /* User.swift in Sources */,
+				B05A020124A50CDA00D03E9E /* UserDetailViewController.swift in Sources */,
+				B05A020A24A534D300D03E9E /* PostsTableViewCell.swift in Sources */,
 				B0AAC90A24A4C16D008AEFCA /* UsersTableViewController.swift in Sources */,
 				B0AAC90624A4C16D008AEFCA /* AppDelegate.swift in Sources */,
 				B05A01FC24A4F22600D03E9E /* UserTableViewCell.swift in Sources */,
+				B05A020724A52ED700D03E9E /* Comment.swift in Sources */,
+				B05A020324A51D6D00D03E9E /* UIImageView+KingFisher.swift in Sources */,
 				B0AAC90824A4C16D008AEFCA /* SceneDelegate.swift in Sources */,
 				B0AAC92024A4DD6C008AEFCA /* APIClient.swift in Sources */,
 				B0AAC92324A4DF02008AEFCA /* UIViewController+Alert.swift in Sources */,

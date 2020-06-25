@@ -13,11 +13,12 @@ class UsersTableViewController: UIViewController {
     @IBOutlet weak var tblUsers: UITableView!
 
     private var users = [User]()
+    private var selectedUser: User?
     private var apiClient = APIClient()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
         initTableView()
         getUsers(withAPIClient: apiClient)
     }
@@ -49,18 +50,38 @@ class UsersTableViewController: UIViewController {
 }
 
 extension UsersTableViewController: UITableViewDelegate {
+    // ANOTHER WAY
+    //    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    //
+    //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    //        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "UserDetailViewController") as! UserDetailViewController
+    //       // self.present(nextViewController, animated:true, completion:nil)
+    //
+    //        self.show(nextViewController, sender: self)
+    //
+    //    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showUserDetail", sender: self)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! UserDetailViewController
+
+        if let indexPath = tblUsers.indexPathForSelectedRow {
+            destinationVC.user = users[indexPath.row]
+        }
+    }
+}
+
+extension UsersTableViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
     }
 
-}
-
-extension UsersTableViewController: UITableViewDataSource {
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
-        // swiftlint:disable:next force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
         cell.initCell(user: user)
         return cell
