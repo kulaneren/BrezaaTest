@@ -1,0 +1,6 @@
+framework module Pods_BrezaaTest {
+  umbrella header "Pods-BrezaaTest-umbrella.h"
+
+  export *
+  module * { export * }
+}
