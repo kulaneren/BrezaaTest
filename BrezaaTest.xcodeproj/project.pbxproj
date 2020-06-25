@@ -13,6 +13,10 @@
 		B0AAC90D24A4C16D008AEFCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AAC90B24A4C16D008AEFCA /* Main.storyboard */; };
 		B0AAC90F24A4C16F008AEFCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0AAC90E24A4C16F008AEFCA /* Assets.xcassets */; };
 		B0AAC91224A4C16F008AEFCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0AAC91024A4C16F008AEFCA /* LaunchScreen.storyboard */; };
+		B0AAC91C24A4C2BA008AEFCA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC91B24A4C2BA008AEFCA /* User.swift */; };
+		B0AAC91E24A4DC70008AEFCA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC91D24A4DC70008AEFCA /* Constants.swift */; };
+		B0AAC92024A4DD6C008AEFCA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC91F24A4DD6C008AEFCA /* APIClient.swift */; };
+		B0AAC92324A4DF02008AEFCA /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0AAC92224A4DF02008AEFCA /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B0AAC90E24A4C16F008AEFCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B0AAC91124A4C16F008AEFCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0AAC91324A4C16F008AEFCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0AAC91B24A4C2BA008AEFCA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B0AAC91D24A4DC70008AEFCA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B0AAC91F24A4DD6C008AEFCA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		B0AAC92224A4DF02008AEFCA /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 		B0AAC90424A4C16D008AEFCA /* BrezaaTest */ = {
 			isa = PBXGroup;
 			children = (
+				B0AAC92124A4DEE0008AEFCA /* Extensions */,
+				B0AAC91A24A4C28C008AEFCA /* APIClient */,
 				B0AAC90524A4C16D008AEFCA /* AppDelegate.swift */,
 				B0AAC90724A4C16D008AEFCA /* SceneDelegate.swift */,
 				B0AAC90924A4C16D008AEFCA /* ViewController.swift */,
@@ -65,6 +75,32 @@
 				B0AAC91324A4C16F008AEFCA /* Info.plist */,
 			);
 			path = BrezaaTest;
+			sourceTree = "<group>";
+		};
+		B0AAC91924A4C225008AEFCA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0AAC91B24A4C2BA008AEFCA /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B0AAC91A24A4C28C008AEFCA /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				B0AAC91924A4C225008AEFCA /* Models */,
+				B0AAC91D24A4DC70008AEFCA /* Constants.swift */,
+				B0AAC91F24A4DD6C008AEFCA /* APIClient.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		B0AAC92124A4DEE0008AEFCA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B0AAC92224A4DF02008AEFCA /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0AAC91E24A4DC70008AEFCA /* Constants.swift in Sources */,
+				B0AAC91C24A4C2BA008AEFCA /* User.swift in Sources */,
 				B0AAC90A24A4C16D008AEFCA /* ViewController.swift in Sources */,
 				B0AAC90624A4C16D008AEFCA /* AppDelegate.swift in Sources */,
 				B0AAC90824A4C16D008AEFCA /* SceneDelegate.swift in Sources */,
+				B0AAC92024A4DD6C008AEFCA /* APIClient.swift in Sources */,
+				B0AAC92324A4DF02008AEFCA /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
