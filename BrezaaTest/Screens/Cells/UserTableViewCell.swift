@@ -7,15 +7,13 @@
 //
 
 import UIKit
-import Kingfisher
 
 class UserTableViewCell: UITableViewCell {
 
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var lblUserName: UILabel!
 
-
-    func initCell(user: User) {
+    func update(user: User) {
         lblUserName.text = user.username
         imgAvatar.setImageWithUserName(userName: user.name)
     } 

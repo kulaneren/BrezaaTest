@@ -66,15 +66,15 @@ class UserDetailViewController: UIViewController {
 }
 
 extension UserDetailViewController: UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let post = posts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell") as! PostsTableViewCell
-        cell.initCell(post: post)
+        cell.update(post: post)
         return cell
     }
 }

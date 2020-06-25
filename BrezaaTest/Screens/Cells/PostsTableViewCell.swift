@@ -13,12 +13,13 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPostTitle: UILabel!
     @IBOutlet weak var lblCommentCount: UILabel!
 
-    func initCell(post: Post) {
+    func update(post: Post) {
         lblPostTitle.text = post.title
 
         APIClient().getCommentCount(withPostId: post.id) { (count, error) in
-            if let error = error as NSError? {
+            if let error = error {
                 self.lblCommentCount.text = "-"
+                print("Received error on getCommentCount: \(String(describing: error))")
             }
             if let count = count {
                 self.lblCommentCount.text = "\(count)"

@@ -50,16 +50,6 @@ class UsersTableViewController: UIViewController {
 }
 
 extension UsersTableViewController: UITableViewDelegate {
-    // ANOTHER WAY
-    //    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    //
-    //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-    //        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "UserDetailViewController") as! UserDetailViewController
-    //       // self.present(nextViewController, animated:true, completion:nil)
-    //
-    //        self.show(nextViewController, sender: self)
-    //
-    //    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showUserDetail", sender: self)
@@ -83,7 +73,7 @@ extension UsersTableViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserTableViewCell") as! UserTableViewCell
-        cell.initCell(user: user)
+        cell.update(user: user)
         return cell
     }
 }
