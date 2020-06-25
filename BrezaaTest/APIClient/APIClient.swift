@@ -46,8 +46,6 @@ class APIClient {
         dataTask?.resume()
     }
 
-
-
     func getPosts(withUserId userId: Int, withCompletion completion: @escaping ([Post]?, Error?) -> Void) {
         let url = URL(string: "\(API.BaseURL)user/\(userId)/posts")!
         dataTask?.cancel()
@@ -73,7 +71,6 @@ class APIClient {
         }
         dataTask?.resume()
     }
-
 
     func getCommentCount(withPostId postId: Int, withCompletion completion: @escaping (Int?, Error?) -> Void) {
         let url = URL(string: "\(API.BaseURL)posts/\(postId)/comments")!

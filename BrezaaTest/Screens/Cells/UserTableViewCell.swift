@@ -16,7 +16,7 @@ class UserTableViewCell: UITableViewCell {
 
 
     func initCell(user: User) {
-        lblUserName.text = user.name
+        lblUserName.text = user.username
         imgAvatar.setImageWithUserName(userName: user.name)
     } 
 }

@@ -86,5 +86,4 @@ extension UsersTableViewController: UITableViewDataSource {
         cell.initCell(user: user)
         return cell
     }
-
 }

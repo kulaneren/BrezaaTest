@@ -29,8 +29,6 @@ class UserDetailViewController: UIViewController {
     }
     
     func initScreen() {
-        
-        tblPosts.delegate = self
         tblPosts.dataSource = self
 
         tblPosts.register(UINib(nibName: "PostsTableViewCell", bundle: nil), forCellReuseIdentifier: "PostsTableViewCell")
@@ -65,9 +63,6 @@ class UserDetailViewController: UIViewController {
             })
         }
     }
-}
-
-extension UserDetailViewController: UITableViewDelegate {
 }
 
 extension UserDetailViewController: UITableViewDataSource {

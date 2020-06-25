@@ -14,8 +14,6 @@ enum API {
     
     static let AvatarBaseURL = "https://api.adorable.io/avatars/120/"
     static let FormatPNG = ".png"
-
-       // http://jsonplaceholder.typicode.com/user/1/posts
 }
 
 enum Timeout {

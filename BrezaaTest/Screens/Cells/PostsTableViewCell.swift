@@ -13,17 +13,12 @@ class PostsTableViewCell: UITableViewCell {
     @IBOutlet weak var lblPostTitle: UILabel!
     @IBOutlet weak var lblCommentCount: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func initCell(post: Post) {
         lblPostTitle.text = post.title
 
         APIClient().getCommentCount(withPostId: post.id) { (count, error) in
             if let error = error as NSError? {
-                return
+                self.lblCommentCount.text = "-"
             }
             if let count = count {
                 self.lblCommentCount.text = "\(count)"
