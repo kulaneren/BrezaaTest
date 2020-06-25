@@ -21,7 +21,7 @@ class APIClient {
     var dataTask: URLSessionDataTask?
 
     func getUsers(withCompletion completion: @escaping ([User]?, Error?) -> Void) {
-        let url = URL(string: API.ServerURL)!
+        let url = URL(string: API.BaseURL + API.UserURLExtension)!
         dataTask?.cancel()
         dataTask = defaultSession.dataTask(with: url) { data, response, error in
             if let error = error {
